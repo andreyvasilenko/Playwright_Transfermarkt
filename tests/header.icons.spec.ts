@@ -70,28 +70,3 @@ test("Header icons - Click on the Tiktok icon and verify Tiktok page displayed @
   await newPage.waitForTimeout(2000);
   await instagramLoginPage.headerIcons.verifyTiktokLoginPageDisplayed();
 });
-
-// test deprecated after ui update
-// test("Header icons - Click on the RSS icon and verify RSS headers displayed @smoke", async ({
-//   browser,
-// }) => {
-//   const context = await browser.newContext();
-//   const page = await context.newPage();
-//   const basePage = new BasePage(page);
-//   await page.goto("/");
-//   const [newPage] = await Promise.all([
-//     context.waitForEvent("page"),
-//     await basePage.headerIcons.clickOnRSSIcon(),
-//   ]);
-//   const RSSPage = new BasePage(newPage);
-//   await newPage.pause();
-//   await newPage.waitForTimeout(2000);
-//   const RSSHeaders = [
-//     "Transfermarkt RSS feeds",
-//     "What is a RSS-Newsfeed?",
-//     "How do I subscribe to the RSS-Newsfeed?",
-//   ];
-//   await RSSPage.headerIcons.verifyAppropriateRSSHeadersDisplayed(
-//     RSSHeaders
-//   );
-// });

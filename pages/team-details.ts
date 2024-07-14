@@ -1,5 +1,4 @@
 import { Page, expect } from "@playwright/test";
-// import log from '../../utils/logger/logger.js';
 
 export class TeamDetailsPage {
   private readonly teamHeader: string = '//div[@class="data-header__profile-container"]';

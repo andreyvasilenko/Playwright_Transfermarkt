@@ -1,5 +1,4 @@
 import { Page, expect } from "@playwright/test";
-// import log from '../../utils/logger/logger.js';
 
 export class ProfilePage {
   private readonly infoBox: string = 'xpath=//div[@class="info-box"]';
@@ -35,33 +34,27 @@ export class ProfilePage {
   constructor(private readonly page: Page) {}
 
   public async navigateToTheProfilePage() {
-    // await this.page.pause();
     this.page.waitForLoadState('domcontentloaded')
     await this.page.goto("/profil/index");
     await this.page.pause();
   }
 
   public async verifyPersonalInfoBoxDisplayed() {
-    // log.info("Click 'Facitity Filter' button");
-    // await this.page.waitForTimeout(2000);
     const element = this.page.locator(this.personalInfoBox);
     await element.scrollIntoViewIfNeeded();
     await expect(this.page.locator(this.personalInfoBox)).toBeVisible();
   }
 
   public async verifySignatureBoxDisplayed() {
-    // log.info("Click 'Facitity Filter' button");
     await expect(this.page.locator(this.signatureBox)).toBeVisible();
   }
 
   public async clickOnTheWallButton() {
-    // log.info("Click 'Facitity Filter' button");
     await this.page.getByRole("link", { name: this.wall }).click();
     await this.page.pause();
   }
 
   public async verifyWallContainCreatePostSectionAndExisitingPosts() {
-    // log.info("Click 'Facitity Filter' button");
     const element = this.page.locator(this.createPostSection);
     await element.scrollIntoViewIfNeeded();
     await this.page.pause();
@@ -71,13 +64,11 @@ export class ProfilePage {
   }
 
   public async clickOnTheFriendsButton() {
-    // log.info("Click 'Facitity Filter' button");
     await this.page.getByRole("link", { name: this.friends }).click();
     await this.page.pause();
   }
 
   public async verifySearchFriendsSectionDisplayed() {
-    // log.info("Click 'Facitity Filter' button");
     const element = this.page.locator(this.searchFriends);
     await element.scrollIntoViewIfNeeded();
     await this.page.pause();
@@ -85,13 +76,11 @@ export class ProfilePage {
   }
 
   public async clickOnThePlayerWatchlistButton() {
-    // log.info("Click 'Facitity Filter' button");
     await this.page.getByRole("link", { name: this.playerWatchlist }).click();
     await this.page.pause();
   }
 
   public async verifyWatchlistSectionDisplayed() {
-    // log.info("Click 'Facitity Filter' button");
     const element = this.page.locator(this.watchlistSection);
     await element.scrollIntoViewIfNeeded();
     await this.page.pause();
@@ -99,13 +88,11 @@ export class ProfilePage {
   }
 
   public async clickOnTheGroundhoppingButton() {
-    // log.info("Click 'Facitity Filter' button");
     await this.page.getByRole("link", { name: this.groundhopping }).click();
     await this.page.pause();
   }
 
   public async verifyGroundhoppingSectionsDisplayed() {
-    // log.info("Click 'Facitity Filter' button");
     const element = this.page.locator(this.groundhoppingTopMarketValuablePlayers);
     await element.scrollIntoViewIfNeeded();
     await this.page.pause();
@@ -125,13 +112,11 @@ export class ProfilePage {
   }
 
   public async clickOnTheDreamTeamButton() {
-    // log.info("Click 'Facitity Filter' button");
     await this.page.getByRole("link", { name: this.dreamTeam }).click();
     await this.page.pause();
   }
 
   public async verifyDreamTeamSectionDisplayed() {
-    // log.info("Click 'Facitity Filter' button");
     const element = this.page.locator(this.dreamTeamSection);
     await element.scrollIntoViewIfNeeded();
     await this.page.pause();
@@ -139,19 +124,16 @@ export class ProfilePage {
   }
 
   public async clickOnTheProfileButton() {
-    // log.info("Click 'Facitity Filter' button");
     await this.page.getByRole("link", { name: this.profile }).click();
     await this.page.pause();
   }
 
   public async clickOnThePostsWorthReadingButton() {
-    // log.info("Click 'Facitity Filter' button");
     await this.page.getByRole("link", { name: this.postsWorthReading }).click();
     await this.page.pause();
   }
 
   public async verifyPostsWorthReadingHeaderDisplayed() {
-    // log.info("Click 'Facitity Filter' button");
     const element = this.page.locator(this.postsWorthReadingHeader);
     await element.scrollIntoViewIfNeeded();
     await this.page.pause();

@@ -10,23 +10,10 @@ export class BasePage {
     public readonly globalSearch: GlobalSearchPage;
     public readonly profileIcons: ProfileIcons;
 
-    // private readonly locSpinner = 'amp-spinner';
-
     constructor(protected readonly page: Page) {
         this.headerIcons = new HeaderIcons(this.page);
         this.headerNavigations = new HeaderNavigations(this.page);
         this.globalSearch = new GlobalSearchPage(this.page);
         this.profileIcons = new ProfileIcons(this.page);
     }
-
-    // public async waitForPageLoad() {
-    //     await this.page.waitForLoadState('load');
-    //     await this.page.waitForSelector('#splashScreen', { state: 'detached' });
-    //     await expect(this.page.locator(this.locSpinner)).toBeHidden();
-    //     await expect(this.page.locator(`${this.locSpinner}:visible`)).toHaveCount(0);
-    // }
-
-    // public async waitABit(timeout: number) {
-    //     await this.page.waitForTimeout(timeout);
-    // }  
 }
