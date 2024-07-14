@@ -72,7 +72,7 @@ test("Account Details - Posts Worth Reading page @smoke", async ({ page }) => {
   await profile.verifyPostsWorthReadingHeaderDisplayed();
 });
 
-test("Account Icons - Click on the Favorite Club icon and verify apropriate options displayed @smoke @debug", async ({ page }) => {
+test("Account Icons - Click on the Favorite Club icon and verify apropriate options displayed @smoke", async ({ page }) => {
   const basePage = new BasePage(page);
   await page.goto("/");
   await basePage.profileIcons.clickOnFavoriteClubIcon();
@@ -81,7 +81,7 @@ test("Account Icons - Click on the Favorite Club icon and verify apropriate opti
   await basePage.profileIcons.verifyFavoriteClubOptionsDisplayed();
 });
 
-test("Account Icons - Click on the Profile icon and verify appropriate buttons displayed @smoke @debug", async ({ page }) => {
+test("Account Icons - Click on the Profile icon and verify appropriate buttons displayed @smoke", async ({ page }) => {
   const basePage = new BasePage(page);
   await page.goto("/");
   await basePage.profileIcons.clickOnProfileIcon();
@@ -90,7 +90,7 @@ test("Account Icons - Click on the Profile icon and verify appropriate buttons d
   await basePage.profileIcons.verifyDropdownProfileOptionsDisplayed();
 });
 
-test("Account Icons - Click on the Notifications icon and verify setttings button displayed @smoke @debug", async ({ page }) => {
+test("Account Icons - Click on the Notifications icon and verify setttings button displayed @smoke", async ({ page }) => {
   const basePage = new BasePage(page);
   await page.goto("/");
   await basePage.profileIcons.clickOnProfileIcon();
@@ -99,7 +99,7 @@ test("Account Icons - Click on the Notifications icon and verify setttings butto
   await basePage.profileIcons.verifyNotificationIconAndSettingsButtonDisplayed();
 });
 
-test("Account Icons - Click on the Private Messages @smoke @debug", async ({ page }) => {
+test("Account Icons - Click on the Private Messages @smoke", async ({ page }) => {
   const basePage = new BasePage(page);
   await page.goto("/");
   await basePage.profileIcons.clickOnProfileIcon();
