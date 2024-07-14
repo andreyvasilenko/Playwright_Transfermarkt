@@ -55,7 +55,7 @@ export class HeaderIcons {
         "https://x.com/i/flow/login?redirect_after_login=%2FTMuk_news"
       );
     } else {
-      expect(this.page.url()).toContain("https://twitter.com/TMuk_news");
+      expect(this.page.url()).toContain("https://x.com/TMuk_news");
     }
   }
 

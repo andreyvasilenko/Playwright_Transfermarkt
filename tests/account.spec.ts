@@ -109,7 +109,7 @@ test("Account Icons - Click on the Private Messages @smoke", async ({ page }) =>
   await basePage.profileIcons.verifyPrivateMessagesHintAndFooterDisplayed();
 });
 
-test("Account Icons - Click on the Favorite icon @smoke  @debug", async ({ page }) => {
+test("Account Icons - Click on the Favorite icon @smoke", async ({ page }) => {
   const basePage = new BasePage(page);
   await page.goto("/");
   await basePage.profileIcons.clickOnfFavoritesIcon();
