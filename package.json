@@ -1,0 +1,20 @@
+{
+  "name": "playwright_transfermarkt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test-all": "playwright test",
+    "test-smoke": "playwright test --grep @smoke",
+    "test-regression": "playwright test --grep @regression",
+    "test-debug": "playwright test --grep @debug",
+    "open-report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.7"
+  }
+}
