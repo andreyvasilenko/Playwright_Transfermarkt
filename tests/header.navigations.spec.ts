@@ -7,8 +7,6 @@ test("Header Navigations - Click on the all news page @smoke", async ({ page }) 
   const basePage = new BasePage(page);
   await page.goto("/");
   await profile.navigateToTheProfilePage();
-  // step beforre ui update
-  // await basePage.headerNavigations.hoverOverNewsButton();
   await basePage.headerNavigations.clickOnHamburgeMenu();
   await basePage.headerNavigations.clickOnAllNews();  
   await page.pause();
@@ -20,7 +18,6 @@ test("Header Navigations - Click on the market values page @smoke @regression", 
     const basePage = new BasePage(page);
     await page.goto("/");
     await profile.navigateToTheProfilePage();
-    // await basePage.headerNavigations.hoverOverNewsButton();
     await basePage.headerNavigations.clickOnMarketValues();  
     await page.pause();
     await page.waitForTimeout(9000);

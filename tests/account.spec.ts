@@ -103,7 +103,6 @@ test("Account Icons - Click on the Private Messages @smoke", async ({ page }) =>
   const basePage = new BasePage(page);
   await page.goto("/");
   await basePage.profileIcons.clickOnProfileIcon();
-  // await basePage.profileIcons.clickOnPrivateMessagesIcon();
   await page.pause();
   await page.waitForTimeout(9000);
   await basePage.profileIcons.verifyPrivateMessagesHintAndFooterDisplayed();

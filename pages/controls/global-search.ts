@@ -1,5 +1,4 @@
 import { Page } from '@playwright/test';
-// import log from '../../utils/logger/logger.js';
 
 export class GlobalSearchPage {
     private readonly globalSearch: string = 'xpath=//input[@class="tm-header__input--search-field"]';
