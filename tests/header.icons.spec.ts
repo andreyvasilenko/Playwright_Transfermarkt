@@ -19,7 +19,7 @@ test("Header icons - Click on the Facebook icon and verify FB login page display
   await fbLoginPage.headerIcons.verifyFacebookLoginPageDisplayed();
 });
 
-test("Header icons - Click on the Twitter icon and verify Twitter page displayed @smoke @debug", async ({
+test("Header icons - Click on the Twitter icon and verify Twitter page displayed @smoke", async ({
   browser,
 }) => {
   const context = await browser.newContext();

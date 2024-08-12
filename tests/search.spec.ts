@@ -6,7 +6,7 @@ import { TeamDetailsPage } from "../pages/team-details";
 import { ProfilePage } from "../pages/profile";
 import { BasePage } from './../pages/base.page';
 
-test("Global Search @smoke", async ({ page }) => {
+test("Global Search - for club @smoke", async ({ page }) => {
     const basePage = new BasePage(page);
     const searchResultsPage = new SearchResultsPage(page);
     const teamDetailsPage = new TeamDetailsPage(page);
@@ -15,4 +15,15 @@ test("Global Search @smoke", async ({ page }) => {
     await basePage.globalSearch.performSearchInGlobalSearch("Arsenal");
     await searchResultsPage.clickOnTheFirstTeam();
     await teamDetailsPage.verifyTeamHeaderDisplayed()
+  });
+
+test("Global Search - for competition @smoke @debug", async ({ page }) => {
+    const basePage = new BasePage(page);
+    const searchResultsPage = new SearchResultsPage(page);
+    const teamDetailsPage = new TeamDetailsPage(page);
+    await page.goto("/");
+    await basePage.globalSearch.clickOnTheGlobalSearch();
+    await basePage.globalSearch.performSearchInGlobalSearch("uefa champions league");
+    await searchResultsPage.clickOnTheChampionsLeagueCompetition();
+    await teamDetailsPage.verifyUEFAChampionsLeagueHeaderDisplayed()
   });
