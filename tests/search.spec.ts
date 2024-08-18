@@ -6,7 +6,7 @@ import { TeamDetailsPage } from "../pages/team-details";
 import { ProfilePage } from "../pages/profile";
 import { BasePage } from './../pages/base.page';
 
-test("Global Search - for club @smoke", async ({ page }) => {
+test("Global Search - for club @smoke @regression", async ({ page }) => {
     const basePage = new BasePage(page);
     const searchResultsPage = new SearchResultsPage(page);
     const teamDetailsPage = new TeamDetailsPage(page);
@@ -17,7 +17,7 @@ test("Global Search - for club @smoke", async ({ page }) => {
     await teamDetailsPage.verifyTeamHeaderDisplayed()
   });
 
-test("Global Search - for competition @smoke @debug", async ({ page }) => {
+test("Global Search - for competition @smoke @regression", async ({ page }) => {
     const basePage = new BasePage(page);
     const searchResultsPage = new SearchResultsPage(page);
     const teamDetailsPage = new TeamDetailsPage(page);

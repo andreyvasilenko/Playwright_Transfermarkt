@@ -30,6 +30,9 @@ export class ProfilePage {
   private readonly profile: string = "Profile";
   private readonly postsWorthReading: string = "Posts worth reading";
   private readonly postsWorthReadingHeader: string = 'xpath=//h2[@class="content-box-headline"]';
+  private readonly postText: string = "#TmUser2gaestebuch_nachricht";
+  private readonly createPost: string = 'xpath=//input[@value="posten"]';
+  private readonly postCreatedByAutotest: string = 'autotest_post';
 
   constructor(private readonly page: Page) {}
 
@@ -138,5 +141,16 @@ export class ProfilePage {
     await element.scrollIntoViewIfNeeded();
     await this.page.pause();
     await expect(this.page.locator(this.postsWorthReadingHeader)).toBeVisible();
+  }
+
+  public async createPostWithText(keyword) {
+    await this.page.locator(this.postText).click();
+    await this.page.locator(this.postText).fill(keyword);
+    await this.page.locator(this.createPost).click();
+  }
+
+  public async verifyNewPostWithTextCreated(dateValue) {
+    await expect.soft(this.page.getByText(this.postCreatedByAutotest).first()).toBeVisible();
+    await expect.soft(this.page.getByText(dateValue).first()).toBeVisible();
   }
 }

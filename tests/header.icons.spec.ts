@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { BasePage } from "./../pages/base.page";
 import { ProfilePage } from "../pages/profile";
 
-test("Header icons - Click on the Facebook icon and verify FB login page displayed @smoke", async ({
+test("Header icons - Click on the Facebook icon and verify FB login page displayed @smoke @regression", async ({
   browser,
 }) => {
   const context = await browser.newContext();
@@ -19,7 +19,7 @@ test("Header icons - Click on the Facebook icon and verify FB login page display
   await fbLoginPage.headerIcons.verifyFacebookLoginPageDisplayed();
 });
 
-test("Header icons - Click on the Twitter icon and verify Twitter page displayed @smoke", async ({
+test("Header icons - Click on the Twitter icon and verify Twitter page displayed @smoke @regression", async ({
   browser,
 }) => {
   const context = await browser.newContext();
@@ -37,7 +37,7 @@ test("Header icons - Click on the Twitter icon and verify Twitter page displayed
   /// why it always open UK account Transfermarkt.co.uk? despite I'm connecting in France or using vpn to USA/Germany
 });
 
-test("Header icons - Click on the Instagram icon and verify Instagram page displayed @smoke", async ({
+test("Header icons - Click on the Instagram icon and verify Instagram page displayed @smoke @regression", async ({
   browser,
 }) => {
   const context = await browser.newContext();
@@ -54,7 +54,7 @@ test("Header icons - Click on the Instagram icon and verify Instagram page displ
   await instagramLoginPage.headerIcons.verifyInstagramLoginPageDisplayed();
 });
 
-test("Header icons - Click on the Tiktok icon and verify Tiktok page displayed @smoke", async ({
+test("Header icons - Click on the Tiktok icon and verify Tiktok page displayed @smoke @regression", async ({
   browser,
 }) => {
   const context = await browser.newContext();
