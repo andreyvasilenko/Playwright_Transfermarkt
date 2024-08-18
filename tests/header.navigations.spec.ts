@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { BasePage } from './../pages/base.page';
 import { ProfilePage } from "../pages/profile";
 
-test("Header Navigations - Click on the all news page @smoke", async ({ page }) => {
+test("Header Navigations - Click on the all news page @smoke @regression", async ({ page }) => {
   const profile = new ProfilePage(page);
   const basePage = new BasePage(page);
   await page.goto("/");
